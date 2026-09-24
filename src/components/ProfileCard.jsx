@@ -20,38 +20,7 @@ function ProfileCard() {
             title: "text 3 text 3 text 3",
             text: "post post post",
             author: "Anton"
-        },
-        {
-            id: 4,
-            title: "text 3 text 3 text 3",
-            text: "post post post",
-            author: "Anton"
-        },
-        {
-            id: 5,
-            title: "text 3 text 3 text 3",
-            text: "post post post",
-            author: "Anton"
-        },
-        {
-            id: 6,
-            title: "text 3 text 3 text 3",
-            text: "post post post",
-            author: "Anton"
-        },
-        {
-            id: 7,
-            title: "text 3 text 3 text 3",
-            text: "post post post",
-            author: "Anton"
-        },
-        {
-            id: 8,
-            title: "text 3 text 3 text 3",
-            text: "post post post",
-            author: "Anton"
-        },
-
+        }
     ]);
 
     const [title, setTitle] = useState("");
@@ -73,6 +42,13 @@ function ProfileCard() {
         setText("");
     }
 
+    function deletePost(id){
+        setPosts(
+            posts.filter((post) => post.id !== id)
+        );
+    }
+
+
     return (
         <section className="profile-card">
             <div className="profile">
@@ -88,13 +64,15 @@ function ProfileCard() {
                 <textarea placeholder="Текст поста" value={text} onChange={(event) => setText(event.target.value)}></textarea>
                 <button type="submit">Опубликовть</button>
             </form>
-
+ 
             {posts.map((post) => (
                 <Post
                     key={post.id}
                     author={post.author}
                     title={post.title}
                     text={post.text}
+                    id={post.id}
+                    onDelete={deletePost}
                 />
             ))}
         </section>

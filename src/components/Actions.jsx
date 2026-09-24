@@ -9,7 +9,7 @@ function Actions() {
                 &#10084;{likes}
             </button>
             <button onClick={() => setReposts(reposts + 1)}>
-                🔁 {reposts}
+                👏 {reposts}
             </button>
         </div>
     )
