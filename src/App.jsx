@@ -1,16 +1,29 @@
-import { useState } from 'react'
+import { Routes, Route } from 'react-router-dom'
+// import { useState } from 'react'
 import './App.css'
+// import ProfileCard from "./components/ProfileCard"
 import Header from "./components/Header"
-import ProfileCard from "./components/ProfileCard"
+import Home from './pages/Home';
+import Profile from './pages/Profile';
+import Settings from './pages/Settings';
+import Info from './pages/Info';
+
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
 
   return (
     <div className='app'>
       <Header />
       <main>
-        <ProfileCard />
+        <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="/profile" element={<Profile />}/>
+          <Route path="/settings" element={<Settings />}/>
+          <Route path="/info" element={<Info />}/>
+        </Routes>
       </main>
     </div>
   )

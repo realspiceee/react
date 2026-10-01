@@ -222,3 +222,90 @@ main {
   transform: translateY(0);
   box-shadow: 0 2px 6px rgba(178, 56, 80, 0.2);
 }
+
+/* НАВИГАЦИЯ В ШАПКЕ */
+.header nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Чтобы ссылки красиво переносились на мобильных */
+}
+
+.header nav a {
+    color: #C4DBF6;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Эффект при наведении на ссылку */
+.header nav a:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Стиль для активной ссылки (если будете использовать NavLink вместо Link) */
+.header nav a.active {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.25);
+    font-weight: 700;
+}
+
+/* СТИЛИ ДЛЯ ОТДЕЛЬНЫХ СТРАНИЦ (Настройки, Информация и т.д.) */
+.page {
+    background: #E7E3D4;
+    border-radius: 24px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(11, 29, 58, 0.15);
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.page h1 {
+    margin: 0 0 16px;
+    font-size: 26px;
+    font-weight: 700;
+    color: #B23850; /* Бордовый цвет для заголовков страниц */
+    border-bottom: 2px solid rgba(133, 144, 170, 0.2);
+    padding-bottom: 12px;
+}
+
+.page p {
+    margin: 0;
+    color: #4a5568;
+    line-height: 1.65;
+    font-size: 15px;
+}
+
+/* СТИЛИ ДЛЯ СТРАНИЦЫ ИНФОРМАЦИИ */
+.site-info {
+    background: #E7E3D4; /* Фирменный нежно-кремовый фон карточек */
+    border-radius: 24px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(11, 29, 58, 0.15);
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.site-info h1 {
+    margin: 0 0 16px;
+    font-size: 26px;
+    font-weight: 800;
+    color: #B23850; /* Фирменный бордовый цвет */
+    text-transform: uppercase; /* Делает заголовок более строгим и заметным */
+    letter-spacing: -0.01em;
+    border-bottom: 2px solid rgba(133, 144, 170, 0.2);
+    padding-bottom: 12px;
+}
+
+.site-info p {
+    margin: 0;
+    color: #4a5568;
+    line-height: 1.7;
+    font-size: 16px;
+    font-weight: 500;
+}
