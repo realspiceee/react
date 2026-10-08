@@ -9,10 +9,12 @@ function Post({author, title, text, id, onDelete}) {
 
             <Actions />
 
+            {onDelete && (
             <button className="delete-button"
                 onClick={() => onDelete(id)}>
                     Удалить
             </button>
+            )}
         </article>
     )
 }

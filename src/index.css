@@ -77,7 +77,6 @@ main {
   border-radius: 50%;
   font-size: 22px;
   font-weight: 700;
-  box-shadow: 0 8px 16px rgba(178, 56, 80, 0.2);
 }
 
 .profile-info h2 {
@@ -269,7 +268,7 @@ main {
     margin: 0 0 16px;
     font-size: 26px;
     font-weight: 700;
-    color: #B23850; /* Бордовый цвет для заголовков страниц */
+    color: #B23850; 
     border-bottom: 2px solid rgba(133, 144, 170, 0.2);
     padding-bottom: 12px;
 }
@@ -308,4 +307,47 @@ main {
     line-height: 1.7;
     font-size: 16px;
     font-weight: 500;
+}
+
+.profile-avatar {
+  width: 60px;
+  border-radius: 50%;
+}
+
+/* КНОПКА УДАЛЕНИЯ ВСЕХ ПОСТОВ */
+.delete-all-btn {
+  border: none;
+  background: #B23850; 
+  color: white;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 15px;
+  align-self: flex-start; 
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(178, 56, 80, 0.2);
+}
+
+.delete-all-btn:hover {
+  background: #962b40; 
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(178, 56, 80, 0.35);
+}
+
+
+.delete-button {
+  border: none;
+  background: #B23850; 
+  color: white;
+  padding: 10px 20px;
+  border-radius: 12px; 
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 15px;
+  align-self: flex-start; 
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(178, 56, 80, 0.2);
 }
